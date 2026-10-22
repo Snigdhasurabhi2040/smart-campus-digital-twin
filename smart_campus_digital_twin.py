@@ -1,19 +1,21 @@
 from dataclasses import dataclass
+import datetime as dt
 
 @dataclass
-class CampusLocation:
-    location_id: str
-    name: str
-    x: float
-    y: float
-    kind: str = "building"
-
-@dataclass
-class Room:
+class Booking:
+    booking_id: int
     room_id: str
-    name: str
-    building_id: str
-    room_type: str
-    capacity: int
-    in_service: bool = True
-    occupied: int = 0
+    title: str
+    start: int
+    end: int
+    weekday: int = None
+    date: dt.date = None
+
+    def summary(self) -> str:
+        return f"{self.title} {start}-{end}"
+
+@dataclass(frozen=True)
+class TimeWindow:
+    day: dt.date
+    start: int
+    end: int
