@@ -1,14 +1,19 @@
-import datetime as dt
-import heapq
-import math
-import re
-import time
+from dataclasses import dataclass
 
-DAY_NAMES = ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
-MINUTES_PER_DAY = 24 * 60
+@dataclass
+class CampusLocation:
+    location_id: str
+    name: str
+    x: float
+    y: float
+    kind: str = "building"
 
-def yes_no_text(value: bool) -> str:
-    return "Yes" if value else "No"
-
-def fmt_time(minutes: int) -> str:
-    return f"{minutes // 60:02d}:{minutes % 60:02d}"
+@dataclass
+class Room:
+    room_id: str
+    name: str
+    building_id: str
+    room_type: str
+    capacity: int
+    in_service: bool = True
+    occupied: int = 0
