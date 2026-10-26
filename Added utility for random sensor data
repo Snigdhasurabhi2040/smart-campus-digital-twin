@@ -1,3 +1,0 @@
-def refresh_sensors(self) -> None:
-    for room_id in self.rooms:
-        self.sensors[room_id] = simulate_sensor(room_id)

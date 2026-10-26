@@ -1,0 +1,3 @@
+def show_alerts_pretty(self) -> None:
+    for priority, msg in self.alerts.show_alerts():
+        print(f"[{ALERT_LEVELS.get(priority, priority)}] {msg}")
