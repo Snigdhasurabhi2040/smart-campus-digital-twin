@@ -1,8 +1,3 @@
-def simulate_sensor(room_id: str) -> SensorReading:
-    return SensorReading(
-        sensor_id=f"S-{room_id}",
-        target_id=room_id,
-        temperature_c=random.uniform(22, 30),
-        energy_kwh=random.uniform(0.5, 5.0),
-        occupancy=random.randint(0, 10),
-    )
+def refresh_sensors(self) -> None:
+    for room_id in self.rooms:
+        self.sensors[room_id] = simulate_sensor(room_id)
