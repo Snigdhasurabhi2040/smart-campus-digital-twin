@@ -1,2 +1,0 @@
-def availability_text(self) -> str:
-    return "Available" if self.physically_free else "Occupied"
