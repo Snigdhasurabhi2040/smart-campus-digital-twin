@@ -1,3 +1,0 @@
-def fmt_energy(kwh: float) -> str:
-    """Format energy usage with 2 decimals and unit."""
-    return f"{kwh:.2f} kWh"
