@@ -1,4 +1,4 @@
-class SmartCampus:
-    """Main application class.
-    Initializes graph, rooms, sensors, alerts, and sample data.
-    """
+def nearest(self, x: float, y: float) -> Optional[Tuple[str, float]]:
+    if self.root is None:
+        return None
+    ...
